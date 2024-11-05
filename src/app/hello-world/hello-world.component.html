@@ -1,0 +1,21 @@
+<ion-header>
+    <ion-toolbar color="secondary">
+        <ion-title>Hello World</ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+    <ion-text color="secondary">
+        <h1 *ngIf="nome !== ''; else digitarNome"> Hello World, {{ nome }}! </h1>
+    </ion-text>
+    <ng-template #digitarNome>
+        <h1>Digite o seu nome: </h1>
+    </ng-template>
+    <!-- <input (keyup)="setNome($event)" [value]="nome" /> -->
+    <!-- <input [(ngModel)]="nome" placeholder="Digite o seu nome: " /> -->
+    <!-- <button (click)="limpar()">Limpar</button> -->
+    <ion-input label="Nome: " [(ngModel)]="nome" type="text" placeholder="Digite o seu nome" clear-input></ion-input>
+    <ion-button color="secondary" (click)="limpar()" fill="outline" shape="round">
+        <ion-icon slot="end" name="bulb-outline"></ion-icon>
+        Limpar
+    </ion-button>
+</ion-content>
