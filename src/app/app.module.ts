@@ -8,9 +8,14 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HelloWorldComponent } from './hello-world/hello-world.component';
 import { FormsModule } from '@angular/forms';
+import { TarefasComponent } from './tarefas/tarefas.component';
 
 @NgModule({
-  declarations: [AppComponent, HelloWorldComponent],
+  declarations: [
+    AppComponent, 
+    HelloWorldComponent,
+    TarefasComponent
+  ],
   imports: [
     BrowserModule, 
     IonicModule.forRoot(), 
